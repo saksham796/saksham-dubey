@@ -1,0 +1,7 @@
+service:
+  name: saksham-dubey
+  type: static
+  config:
+    source_dir: dist
+    build_command: npm install && npm run build
+    publish_dir: dist
