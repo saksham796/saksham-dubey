@@ -1,7 +1,7 @@
 service:
   name: saksham-dubey
-  type: static
+  type: web
   config:
-    source_dir: dist
     build_command: npm install && npm run build
-    publish_dir: dist
+    start_command: npm run start
+    port: 3000
