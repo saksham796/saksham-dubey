@@ -9,30 +9,35 @@ const projects = [
     category: "Low-Code Platform",
     tools: "Angular, Next.js, NestJS, MongoDB",
     image: "/images/Solidx.png",
+    description: "A comprehensive low-code platform built with Angular and NestJS.",
   },
   {
     title: "Radix",
     category: "E-Commerce",
     tools: "Angular, Next.js, NestJS, CMS",
     image: "/images/radix.png",
+    description: "Scalable E-commerce solution using Next.js and Microservices.",
   },
   {
     title: "Bond Cancellation",
     category: "Import-Export Automation",
     tools: "Angular, Next.js, NestJS, Workflows",
     image: "/images/bond.png",
+    description: "Workflow automation for import-export logistics.",
   },
   {
     title: "Sapphire",
     category: "CRM Platform",
     tools: "AngularJS, NestJS, PostgreSQL",
     image: "/images/sapphire.png",
+    description: "Enterprise CRM platform with real-time data analytics.",
   },
   {
     title: "Mpro",
     category: "Insurance Platform",
     tools: "React.js, Node.js, Microservices",
     image: "/images/Maxlife.png",
+    description: "High-performance insurance platform with microservices architecture.",
   },
 ];
 
@@ -112,10 +117,13 @@ const Work = () => {
                           <span className="tools-label">Tools & Features</span>
                           <p>{project.tools}</p>
                         </div>
+                        <p className="carousel-description" style={{ marginTop: '10px', fontSize: '0.9rem', opacity: 0.8 }}>
+                          {project.description}
+                        </p>
                       </div>
                     </div>
                     <div className="carousel-image-wrapper">
-                      <WorkImage image={project.image} alt={project.title} />
+                      <WorkImage image={project.image} alt={`${project.title} - ${project.category}`} />
                     </div>
                   </div>
                 </div>

@@ -42,29 +42,30 @@ const Navbar = () => {
   return (
     <>
       <div className="header">
-        <a href="/#" className="navbar-title" data-cursor="disable">
+        <a href="/#" className="navbar-title" data-cursor="disable" aria-label="Saksham Dubey Home">
           SD
         </a>
         <a
           href="mailto:hello@sakshampy.in"
           className="navbar-connect"
           data-cursor="disable"
+          aria-label="Email Saksham Dubey"
         >
          hello@sakshampy.in
         </a>
         <ul>
           <li>
-            <a data-href="#about" href="#about">
+            <a data-href="#about" href="#about" aria-label="About section">
               <HoverLinks text="ABOUT" />
             </a>
           </li>
           <li>
-            <a data-href="#work" href="#work">
+            <a data-href="#work" href="#work" aria-label="Work section">
               <HoverLinks text="WORK" />
             </a>
           </li>
           <li>
-            <a data-href="#contact" href="#contact">
+            <a data-href="#contact" href="#contact" aria-label="Contact section">
               <HoverLinks text="CONTACT" />
             </a>
           </li>

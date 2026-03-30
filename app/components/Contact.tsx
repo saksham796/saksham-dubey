@@ -24,26 +24,28 @@ const Contact = () => {
               target="_blank"
               data-cursor="disable"
               className="contact-social"
+              aria-label="Visit my GitHub"
             >
-              Github <MdArrowOutward />
+              Github <MdArrowOutward aria-hidden="true" />
             </a>
             <a
               href="https://www.linkedin.com/in/saksham-dubey-0451892a2"
               target="_blank"
               data-cursor="disable"
               className="contact-social"
+              aria-label="Visit my LinkedIn"
             >
-              Linkedin <MdArrowOutward />
+              Linkedin <MdArrowOutward aria-hidden="true" />
             </a>
             <a
               href="https://x.com/"
               target="_blank"
               data-cursor="disable"
               className="contact-social"
+              aria-label="Visit my Twitter"
             >
-              Twitter <MdArrowOutward />
+              Twitter <MdArrowOutward aria-hidden="true" />
             </a>
-
           </div>
           <div className="contact-box">
             <h2>
