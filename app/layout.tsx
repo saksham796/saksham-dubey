@@ -11,11 +11,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Saksham Dubey | Full Stack Developer",
     description: "Personal portfolio of Saksham Dubey, showcasing projects and expertise in full stack development.",
-    url: "https://sakshamdubey.com", // Recommended to update with actual domain
+    url: "https://sakshampy.in",
     siteName: "Saksham Dubey Portfolio",
     images: [
       {
-        url: "/og-image.png", // Recommended to add an OG image in public folder
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Saksham Dubey Portfolio Preview",
@@ -52,11 +52,11 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Saksham Dubey",
-    url: "https://sakshamdubey.com",
+    url: "https://sakshampy.in",
     jobTitle: "Full Stack Developer",
     sameAs: [
-      "https://github.com/sakshamdubey", // Update with real social links
-      "https://linkedin.com/in/sakshamdubey",
+      "https://github.com/saksham801",
+      "https://linkedin.com/in/saksham-dubey-0451892a2",
     ],
     description: "Full Stack Developer with 4+ years of experience building scalable web applications.",
   };
@@ -65,7 +65,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://sakshamdubey.com" />
+        <link rel="canonical" href="https://sakshampy.in" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
