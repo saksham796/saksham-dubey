@@ -8,10 +8,13 @@
     "directory": ".open-next/assets",
     "binding": "ASSETS"
   },
-  "observability": {
-    "logs": {
-      "enabled": false,
-      "invocation_logs": true
-    }
+ "observability": {
+  "logs": {
+    "enabled": true,
+    "invocation_logs": true
+  },
+  "traces": {
+    "enabled": true
   }
+}
 }
