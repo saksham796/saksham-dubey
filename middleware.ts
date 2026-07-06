@@ -4,26 +4,23 @@ import type { NextRequest } from 'next/server'
 export function middleware(req: NextRequest) {
   const url = req.nextUrl.clone()
   const pathname = url.pathname
+  const response = NextResponse.next()
 
-  // Allow the Turnstile page, API route, Next.js internals and common static assets
   if (
-    pathname.startsWith('/api/turnstile') ||
     pathname.startsWith('/_next') ||
     pathname.startsWith('/static') ||
     pathname.startsWith('/draco') ||
-    pathname.startsWith('/images') ||
-    pathname.startsWith('/turnstile')
+    pathname.startsWith('/images')
   ) {
-    return NextResponse.next()
+    response.headers.set('Cache-Control', 'public, max-age=31536000, immutable')
+    return response
   }
 
-  const cookie = req.cookies.get('turnstile')
-  if (!cookie) {
-    url.pathname = '/turnstile'
-    return NextResponse.redirect(url)
+  if (pathname === '/' || pathname === '/robots.txt' || pathname === '/sitemap.xml') {
+    response.headers.set('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=86400')
   }
 
-  return NextResponse.next()
+  return response
 }
 
 export const config = {

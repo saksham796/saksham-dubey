@@ -9,16 +9,6 @@ I have modified the gsap club plugins with the trial plugins, but with the trial
 
 ### Development
 
-Turnstile setup
----------------
-
-To enable the Cloudflare Turnstile gate used by the site add the following environment variables to your `.env.local`:
-
-- `NEXT_PUBLIC_TURNSTILE_SITE_KEY` — your Turnstile site key (exposed to the browser)
-- `TURNSTILE_SECRET_KEY` — your Turnstile secret key (server only)
-
-After adding the keys restart the Next.js dev server. The middleware will redirect visitors to `/turnstile` until they complete verification.
-
 Cloudflare Cache API example
 ----------------------------
 

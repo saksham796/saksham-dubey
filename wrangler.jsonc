@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "saksham-dubey", 
+  "name": "saksham-dubey",
   "compatibility_date": "2024-09-23",
   "compatibility_flags": ["nodejs_compat"],
   "main": ".open-next/worker.js",
@@ -8,13 +8,16 @@
     "directory": ".open-next/assets",
     "binding": "ASSETS"
   },
- "observability": {
-  "logs": {
-    "enabled": true,
-    "invocation_logs": true
-  },
-  "traces": {
+  "cache": {
     "enabled": true
+  },
+  "observability": {
+    "logs": {
+      "enabled": true,
+      "invocation_logs": true
+    },
+    "traces": {
+      "enabled": true
+    }
   }
-}
 }
