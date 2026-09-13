@@ -16,7 +16,7 @@ export function middleware(req: NextRequest) {
     return response
   }
 
-  if (pathname === '/' || pathname === '/robots.txt' || pathname === '/sitemap.xml') {
+  if (pathname === '/' || pathname === '/robots.txt' || pathname === '/sitemap.xml' || pathname === '/llms.txt' || pathname === '/llms-full.txt') {
     response.headers.set('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=86400')
   }
 

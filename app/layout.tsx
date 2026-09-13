@@ -3,11 +3,18 @@ import "./globals.css";
 import "./App.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://sakshampy.in"),
   title: "Saksham Dubey | Full Stack Developer Portfolio",
   description: "Explore the portfolio of Saksham Dubey, a Full Stack Developer with 4+ years of experience in React, Next.js, Node.js, and modern web technologies. Building scalable, high-performance web applications.",
   keywords: ["Saksham Dubey", "Full Stack Developer", "Software Engineer", "React Developer", "Next.js Portfolio", "Web Development", "Node.js Developer", "NestJS", "Cloudflare Developers"],
   authors: [{ name: "Saksham Dubey" }],
   creator: "Saksham Dubey",
+  alternates: {
+    canonical: "/",
+    types: {
+      "text/markdown": "/llms.txt",
+    },
+  },
   openGraph: {
     title: "Saksham Dubey | Full Stack Developer",
     description: "Personal portfolio of Saksham Dubey, showcasing projects and expertise in full stack development.",
@@ -65,7 +72,6 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://sakshampy.in" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
