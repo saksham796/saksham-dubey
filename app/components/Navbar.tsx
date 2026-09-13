@@ -3,6 +3,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HoverLinks from "./HoverLinks";
 import { gsap } from "gsap";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
+import Link from "next/link";
 import "./styles/Navbar.css";
 
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
@@ -42,9 +43,9 @@ const Navbar = () => {
   return (
     <>
       <div className="header">
-        <a href="/#" className="navbar-title" data-cursor="disable" aria-label="Saksham Dubey Home">
+        <Link href="/#" className="navbar-title" data-cursor="disable" aria-label="Saksham Dubey Home">
           SD
-        </a>
+        </Link>
         <a
           href="mailto:hello@sakshampy.in"
           className="navbar-connect"

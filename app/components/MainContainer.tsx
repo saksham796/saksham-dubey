@@ -13,10 +13,11 @@ import setSplitText from "./utils/splitText";
 const TechStack = lazy(() => import("./TechStack"));
 
 const MainContainer = ({ children }: PropsWithChildren) => {
-  const [isDesktopView, setIsDesktopView] = useState<boolean>(false);
+  const [isDesktopView, setIsDesktopView] = useState<boolean>(
+    () => typeof window !== "undefined" && window.innerWidth > 1024
+  );
 
   useEffect(() => {
-    setIsDesktopView(window.innerWidth > 1024);
     const resizeHandler = () => {
       setSplitText();
       setIsDesktopView(window.innerWidth > 1024);

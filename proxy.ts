@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
-export function middleware(req: NextRequest) {
+export function proxy(req: NextRequest) {
   const url = req.nextUrl.clone()
   const pathname = url.pathname
   const response = NextResponse.next()
@@ -16,7 +16,14 @@ export function middleware(req: NextRequest) {
     return response
   }
 
-  if (pathname === '/' || pathname === '/robots.txt' || pathname === '/sitemap.xml' || pathname === '/llms.txt' || pathname === '/llms-full.txt') {
+  if (
+    pathname === '/' ||
+    pathname === '/robots.txt' ||
+    pathname === '/sitemap.xml' ||
+    pathname === '/llms.txt' ||
+    pathname === '/llms-full.txt' ||
+    pathname === '/markdown'
+  ) {
     response.headers.set('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=86400')
   }
 
